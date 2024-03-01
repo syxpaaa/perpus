@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('Judul', 255);
             $table->string('Penulis', 255);
             $table->string('Penerbit', 255);
+            $table->integer('TahunTerbit',11);
             $table->timestamps();
             $table->primary('BukuID');
         }); 

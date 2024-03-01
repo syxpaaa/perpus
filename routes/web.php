@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin/dasbor');
-});
 
-Route::get('login', function () {
-    return view('peminjam/login');
-});
+
+//admin
+Route::get('/',[adminController::class,'index']);
+Route::get('buku',[adminController::class,'buku']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
+Route::get('login',[adminController::class,'login']);
+Route::post('login',[adminController::class,'ceklogin']);
+
+Route::get('registrasi',[AdminController::class,'registrasi']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
+Route::post('registrasi',[AdminController::class,'simpen']);

@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('ulasanbuku',function(Blueprint $table){
+            $table->integer('UlasanID');
+            $table->integer('UserID');
+            $table->integer('BukuID');
+            $table->text('Ulasan');
+            $table->integer('Rating');
+            $table->timestamps();
+            $table->primary('UlasanID');
+        });
     }
 
     /**
@@ -19,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::drop('ulasanbuku');
     }
 };
