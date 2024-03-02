@@ -12,11 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('admin', function (Blueprint $table){
-            $table->integer('AdminID');
+            $table->integer('AdminID')->autoIncrement();
             $table->string('Username', 255);
             $table->string('password', 255);
             $table->string('email', 255);
-            $table->primary('AdminID');
+            $table->string('namalengkap',255);
+            $table->string('noHp',13);
+            $table->timestamps();
         }); 
     }
 

@@ -12,13 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('buku', function (Blueprint $table){
-            $table->integer('BukuID',11);
+            $table->integer('BukuID')->autoIncrement();
             $table->string('Judul', 255);
             $table->string('Penulis', 255);
             $table->string('Penerbit', 255);
-            $table->integer('TahunTerbit',11);
+            $table->integer('TahunTerbit');
             $table->timestamps();
-            $table->primary('BukuID');
         }); 
     }
 

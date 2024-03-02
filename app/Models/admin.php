@@ -12,7 +12,7 @@ class admin extends Model
      //set tabel
      protected $table = "admin";
      //set primary key
-     protected $primaryKey = "adminID";
+     protected $primaryKey = "AdminID";
      //set auto increment
      public $incrementing = false;
  

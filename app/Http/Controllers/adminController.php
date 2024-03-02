@@ -33,15 +33,15 @@ class adminController extends Controller
     public function simpen(request $request){
         $p =new admin();
         $cek=$request->validate([
-            'username'=>'required',
-            'password'=>'required',
+            'Username'=>'required',
+            'Password'=>'required',
+            'email'=>'required',
             'namalengkap'=>'required',
-            'jeniskelamin'=>'required',
             'noHp'=>'required|max:13'
         ]);
         $p->create($request->all());
-        if ($p->where('username',$request->input('username'))->where('password',$request->input('password'))->where('namalengkap',$request->input('namalengkap'))->where('jeniskelamin',$request->input('jeniskelamin'))->where('noHp',$request->input('noHp'))->exists()){
-            return redirect('petugas')->with('pesan','registrasi berhasil');
+        if ($p->where('Username',$request->input('Username'))->where('Password',$request->input('Password'))->where('email',$request->input('email'))->where('namalengkap',$request->input('namalengkap'))->where('noHp',$request->input('noHp'))->exists()){
+            return redirect('/')->with('pesan','registrasi berhasil');
         }
         return back()->with('pesan','registrasi gagal');
     }
@@ -50,4 +50,6 @@ class adminController extends Controller
         $inem = new buku();
         return view('admin.buku',['data'=>$inem->all()]);
     }
+
+
 }

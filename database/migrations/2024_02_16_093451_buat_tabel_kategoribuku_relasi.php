@@ -12,11 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kategoribuku_relasi', function (Blueprint $table){
-            $table->integer('KategoriBukuID',11);
-            $table->integer('BukuID',11);
-            $table->integer('KategoriID', 11);
+            $table->integer('KategoriBukuID')->autoIncrement();
+            $table->integer('BukuID');
+            $table->integer('KategoriID');
             $table->timestamps();
-            $table->primary('KategoriBukuID');
         }); 
     }
 

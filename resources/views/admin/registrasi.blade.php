@@ -16,9 +16,9 @@
     </style>
 </head>
 <body>
-    <div id="main" class="d-flex vh-100 align-items-center"  style="background-color: #abd9fa;">
+    <div id="main" class="d-flex vh-100 align-items-center"  style="background-color: #FBF9F1;">
         <div class="container-fluid">
-            <div class="card mx-auto border-0"  style="background-color: #9DB2BF;">
+            <div class="card mx-auto border-0"  style="background-color: #AAD7D9;">
                 <div class="card-body">
                     <h1 class="h1">Laporkan !!</h1>
                     <h3 class="h4 mb-4 ">Selamat datang</h3>
@@ -34,29 +34,20 @@
                       </div>
                     @endif
 
-                    <form action="{{url('register')}}" method="post">
+                    <form action="{{url('registrasi')}}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" name="nama_petugas" id="nama" placeholder="Nama Lengkap">
-                            @error('nama')
+                            <label for="Username" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="Username" id="Username" placeholder="Username">
+                            @error('Username')
                                 <div class="form-text">
                                     {{$message}}
                                 </div>
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
-                            @error('username')
-                                <div class="form-text">
-                                    {{$message}}
-                                </div>
-                            @enderror
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="text" class="form-control" name="password" id="password" placeholder="Password">
+                            <label for="Password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="Password" id="Password" placeholder="Password">
                             @error('password')
                                 <div class="form-text">
                                     {{$message}}
@@ -64,21 +55,27 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="telp" class="form-label">Telp</label>
-                            <input type="text" class="form-control" name="telp" id="telp" placeholder="Telp">
-                            @error('telp')
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="email">
+                            @error('email')
                                 <div class="form-text">
                                     {{$message}}
                                 </div>
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">jeniskelamin</label>
-                            <select class="form-select" name="jeniskelamin" id="jeniskelamin" placeholder="jeniskelamin">
-                            <option value="laki-laki">laki laki</option>
-                            <option value="perempuan">perempuan</option>
-                            </select>
-                            @error('level')
+                            <label for="namalengkap" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" name="namalengkap" id="namalengkap" placeholder="nama lengkap">
+                            @error('namalengkap')
+                                <div class="form-text">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
+                            <label for="noHp" class="form-label">no Hp</label>
+                            <input type="number" class="form-control" name="noHp" id="noHp" placeholder="no Hp">
+                            @error('noHp')
                                 <div class="form-text">
                                     {{$message}}
                                 </div>
