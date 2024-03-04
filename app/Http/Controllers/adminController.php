@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class adminController extends Controller
 {
     public function index(){
-        return view('adminlayot');
+        return view('admin.dasbor');
     }
     public function login(){
         return view('admin.login');
@@ -49,6 +49,22 @@ class adminController extends Controller
     public function buku(){
         $inem = new buku();
         return view('admin.buku',['data'=>$inem->all()]);
+    }
+    
+    public function tambahBuku()
+    {
+        return view('admin.tambahbuku');
+    }
+    public function cektambahbuku(Request $request){
+        $m = new buku();
+        $cek = $request->validate([
+            'Judul'=>'required',
+            'Penulis'=>'required',            
+            'Penerbit'=>'required',             
+            'TahunTerbit'=>'required'
+        ]);
+        $m->create($request->all());
+        return redirect('buku');
     }
 
 

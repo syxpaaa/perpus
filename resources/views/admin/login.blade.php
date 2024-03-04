@@ -93,7 +93,7 @@
                 <div class="form-group mb-3">
                   <label for="Username" class="form-label">Username</label>
                   <div class="input-group input-group-merge input-group-alternative">
-                    <input class="form-control" placeholder="Username" type="Username">
+                    <input class="form-control" placeholder="Username" type="Username" name="Username" id="Username">
                     @error('Username')
                     <div class="form-text">
                         {{$message}}
@@ -104,7 +104,7 @@
                 <div class="form-group">
                   <label for="password" class="form-label">Password</label>
                   <div class="input-group input-group-merge input-group-alternative">
-                    <input class="form-control" placeholder="password" type="password">
+                    <input class="form-control" placeholder="password" type="password" name="password" id="password">
                     @error('password')
                                 <div class="form-text">
                                     {{$message}}

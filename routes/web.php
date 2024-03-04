@@ -24,3 +24,6 @@ Route::post('login',[adminController::class,'ceklogin']);
 
 Route::get('registrasi',[AdminController::class,'registrasi']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
 Route::post('registrasi',[AdminController::class,'simpen']);
+Route::view('layout','adminlayot');
+Route::get('tambahbuku',[AdminController::class,'tambahbuku']);
+Route::post('tambahbuku',[AdminController::class,'cektambahbuku']);
