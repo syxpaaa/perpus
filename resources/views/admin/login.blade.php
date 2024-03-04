@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>Login</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -49,23 +49,6 @@
             </div>
           </div>
         </div>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a href="dashboard.html" class="nav-link">
-              <span class="nav-link-inner--text">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="login.html" class="nav-link">
-              <span class="nav-link-inner--text">Login</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="register.html" class="nav-link">
-              <span class="nav-link-inner--text">Register</span>
-            </a>
-          </li>
-        </ul>
         <hr class="d-lg-none" />
       </div>
     </div>
@@ -93,36 +76,47 @@
         <div class="col-lg-5 col-md-7">
           <div class="card bg-secondary border-0 mb-0">
             <div class="card-body px-lg-5 py-lg-5">
-              <form role="form">
+              <h2 class="h2">SELAMAT DATANG</h2>
+              @if (session('pesan'))
+              <div class="alert alert-success" role="alert">
+                  {{session('pesan')}}
+                </div>
+              @endif
+              {{-- pesan jika validasi gagal --}}
+              @if ($errors->any())
+              <div class="alert alert-success" role="alert">
+                  Gagal login
+                </div>
+              @endif
+              <form action="{{url('login')}}" method="post">
+                @csrf
                 <div class="form-group mb-3">
+                  <label for="Username" class="form-label">Username</label>
                   <div class="input-group input-group-merge input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                    </div>
                     <input class="form-control" placeholder="Username" type="Username">
+                    @error('Username')
+                    <div class="form-text">
+                        {{$message}}
+                    </div>
+                @enderror
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="password" class="form-label">Password</label>
                   <div class="input-group input-group-merge input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" placeholder="password" type="password">
+                    @error('password')
+                                <div class="form-text">
+                                    {{$message}}
+                                </div>
+                            @enderror
                   </div>
                 </div>
-                <div class="custom-control custom-control-alternative custom-checkbox">
-                  <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                  <label class="custom-control-label" for=" customCheckLogin">
-                    <span class="text-muted">Remember me</span>
-                  </label>
-                </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary my-4">Sign in</button>
+                  <button class="btn btn-primary my-4">Sign in</button>
                 </div>
               </form>
             </div>
-          </div>
-          <div class="row mt-3">
           </div>
         </div>
       </div>
