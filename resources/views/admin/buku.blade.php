@@ -35,8 +35,8 @@
                     <td>{{ $inem->Penerbit }}</td>
                     <td>{{ $inem->TahunTerbit }}</td>
                     <td class="right">
-                        <a href="{{ url('editt/' . $inem->BukuID) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ url('hapuss/' . $inem->BukuID) }}"
+                        <a href="{{ url('edit/' . $inem->BukuID) }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ url('hapus/' . $inem->BukuID) }}"
                             class="btn btn-danger">Delete</a>
                     </td>
                 </tr>

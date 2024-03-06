@@ -22,8 +22,11 @@ Route::get('buku',[adminController::class,'buku']);//->middleware(ValidasiAdmin:
 Route::get('login',[adminController::class,'login']);
 Route::post('login',[adminController::class,'ceklogin']);
 
-Route::get('registrasi',[AdminController::class,'registrasi']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
-Route::post('registrasi',[AdminController::class,'simpen']);
+Route::get('registrasi',[adminController::class,'registrasi']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
+Route::post('registrasi',[adminController::class,'simpen']);
 Route::view('layout','adminlayot');
-Route::get('tambahbuku',[AdminController::class,'tambahbuku']);
-Route::post('tambahbuku',[AdminController::class,'cektambahbuku']);
+Route::get('tambahbuku',[adminController::class,'tambahbuku']);
+Route::post('tambahbuku',[adminController::class,'cektambahbuku']);
+Route::get('edit/{id}',[adminController::class,'edit']);
+Route::post('edit/{id}',[adminController::class,'update']);
+Route::get('hapus/{id}',[adminController::class,'hapus']);

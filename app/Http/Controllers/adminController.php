@@ -66,6 +66,28 @@ class adminController extends Controller
         $m->create($request->all());
         return redirect('buku');
     }
+    public function hapus($id){
+        $p = new buku();
+        $p = $p->find($id);
+        $p->delete();
+        return back();
+    }
+
+    public function edit($id){
+        $p = new buku();
+        return view('admin.editbuku',['editbu'=>$p->find($id)]);
+    }
+    public function update(Request $request,$id){
+        $p = new buku();
+        $validasi = $request->validate([
+            'Judul'=>'required',
+            'Penulis'=>'required',            
+            'Penerbit'=>'required',             
+            'TahunTerbit'=>'required'
+        ]);
+        $p = $p->find($id)->update($request->all());
+        return redirect('buku')->with('Pesan','Update Buku Berhasil');
+    }
 
 
 }
