@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\admin;
 use App\Models\buku;
+use App\Models\kategoribuku;
 use Illuminate\Http\Request;
 
 class adminController extends Controller
@@ -83,11 +84,29 @@ class adminController extends Controller
             'Judul'=>'required',
             'Penulis'=>'required',            
             'Penerbit'=>'required',             
-            'TahunTerbit'=>'required'
+            'TahunTerbit'=>'required',
+            'stok'=>'required'
         ]);
         $p = $p->find($id)->update($request->all());
         return redirect('buku')->with('Pesan','Update Buku Berhasil');
     }
 
+    public function kategori(){
+        $inem = new kategoribuku();
+        return view('admin.kategori',['data'=>$inem->all()]);
+    }
+
+    public function tambahkategori()
+    {
+        return view('admin.tambahkategori');
+    }
+    public function cektambahkategori(Request $request){
+        $m = new kategoribuku();
+        $cek = $request->validate([
+            'Namakategoori'=>'required'
+        ]);
+        $m->create($request->all());
+        return redirect('kategori');
+    }
 
 }

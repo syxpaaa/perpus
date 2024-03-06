@@ -30,25 +30,31 @@
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Judul" id="Judul" placeholder="Judul" />
+                    <input type="text" class="form-control" name="Judul" id="Judul" value="{{ $editbu->Judul }}" />
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label" for="basic-default-name">Penulis</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Penulis" id="Penulis" placeholder="Penulis" />
+                    <input type="text" class="form-control" name="Penulis" id="Penulis" value="{{ $editbu->Penulis }}"/>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label" for="basic-default-name">Penerbit</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Penerbit" id="Penerbit" placeholder="Penerbit" />
+                    <input type="text" class="form-control" name="Penerbit" id="Penerbit" value="{{ $editbu->Penerbit }}" />
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label" for="basic-default-name">Tahun Terbit</label>
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" name="TahunTerbit" id="TahunTerbit" placeholder="Tahun Terbit" />
+                    <input type="number" class="form-control" name="TahunTerbit" id="TahunTerbit" value="{{ $editbu->TahunTerbit }}"/>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">Stok</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" name="stok" id="stok" value="{{ $editbu->stok }}"/>
                   </div>
                 </div>
                 <div class="mb-3">
@@ -59,7 +65,6 @@
                   </div>
               </form>
             </div>
-         
           </table>
         </div>
       </div>

@@ -51,6 +51,12 @@
                     <input type="number" class="form-control" name="TahunTerbit" id="TahunTerbit" placeholder="Tahun Terbit" />
                   </div>
                 </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">Stok</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" name="stok" id="stok" placeholder="Stok" />
+                  </div>
+                </div>
                 <div class="mb-3">
                     <button class="btn btn-primary w-100">Tambah</button>
                   </div>
