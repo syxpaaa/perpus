@@ -26,9 +26,12 @@ class adminController extends Controller
         return back()->with('pesan','username dan password belum terdaftar');
     }
 
-
     public function registrasi(){
-        return view('admin.registrasi');
+        $inem = new admin();
+        return view('admin.registrasi',['data'=>$inem->all()]);
+    }
+    public function tambahpetu(){
+        return view('admin.tambahpetu');
     }
 
     public function simpen(request $request){
@@ -42,7 +45,7 @@ class adminController extends Controller
         ]);
         $p->create($request->all());
         if ($p->where('Username',$request->input('Username'))->where('password',$request->input('password'))->where('email',$request->input('email'))->where('namalengkap',$request->input('namalengkap'))->where('noHp',$request->input('noHp'))->exists()){
-            return redirect('/')->with('pesan','registrasi berhasil');
+            return redirect('registrasi')->with('pesan','registrasi berhasil');
         }
         return back()->with('pesan','registrasi gagal');
     }

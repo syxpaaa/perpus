@@ -48,20 +48,20 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('kategori')}}">
-                <i class="ni ni-pin-3 text-primary"></i>
+                <i class="ni ni-bullet-list-67 text-primary"></i>
                 <span class="nav-link-text">kategori Buku </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/profile.html">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Profile</span>
+              <a class="nav-link" href="{{url('registrasi')}}">
+                <i class="ni ni-single-02 text-pink"></i>
+                <span class="nav-link-text">Register</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="examples/tables.html">
                 <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Tables</span>
+                <span class="nav-link-text">Laporan</span>
               </a>
             </li>
             <li class="nav-item">
@@ -70,18 +70,7 @@
                 <span class="nav-link-text">Login</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">
-                <i class="ni ni-circle-08 text-pink"></i>
-                <span class="nav-link-text">Register</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="examples/upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade</span>
-              </a>
-            </li>
+
           </ul>
         </div>
       </div>
