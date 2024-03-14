@@ -29,9 +29,8 @@
                     <td>{{ $inem->KategoriID }}</td>
                     <td>{{ $inem->Namakategoori }}</td>
                     <td class="right">
-                        <a href="{{ url('edit/' . $inem->KategoriID) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ url('hapus/' . $inem->KategoriID) }}"
-                            class="btn btn-danger">Delete</a>
+                        <a href="{{ url('kategori/edit/' . $inem->KategoriID) }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ url('kategori/hapus/' . $inem->KategoriID) }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             @endforeach

@@ -65,7 +65,9 @@ class adminController extends Controller
             'Judul'=>'required',
             'Penulis'=>'required',            
             'Penerbit'=>'required',             
-            'TahunTerbit'=>'required'
+            'TahunTerbit'=>'required',
+            'stok'=>'required',
+            'KategoriID'=>'required'
         ]);
         $m->create($request->all());
         return redirect('buku');
@@ -88,7 +90,8 @@ class adminController extends Controller
             'Penulis'=>'required',            
             'Penerbit'=>'required',             
             'TahunTerbit'=>'required',
-            'stok'=>'required'
+            'stok'=>'required',
+            'KategoriID'=>'required'
         ]);
         $p = $p->find($id)->update($request->all());
         return redirect('buku')->with('Pesan','Update Buku Berhasil');
@@ -110,6 +113,26 @@ class adminController extends Controller
         ]);
         $m->create($request->all());
         return redirect('kategori');
+    }
+
+    public function hps($id){
+        $p = new kategoribuku();
+        $p = $p->find($id);
+        $p->delete();
+        return back();
+    }
+    public function editt($id){
+        $p = new kategoribuku();
+        return view('admin.editkategori',['editka'=>$p->find($id)]);
+    }
+
+    public function updat(Request $request,$id){
+        $p = new kategoribuku();
+        $validasi = $request->validate([
+            'Namakategoori'=>'required'
+        ]);
+        $p = $p->find($id)->update($request->all());
+        return redirect('buku')->with('Pesan','Update Buku Berhasil');
     }
 
 }

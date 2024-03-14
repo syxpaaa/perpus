@@ -24,6 +24,7 @@
               <th scope="col">Penerbit</th>
               <th scope="col">Tahun Terbit</th>
               <th scope="col">Stok</th>
+              <th scope="col">kategori</th>
               <th scope="col">Aksi</th>
             </tr>
           </thead>
@@ -36,10 +37,10 @@
                     <td>{{ $inem->Penerbit }}</td>
                     <td>{{ $inem->TahunTerbit }}</td>
                     <td>{{ $inem->stok }}</td>
+                    <td>{{ $inem->KategoriID }}</td>
                     <td class="right">
                         <a href="{{ url('edit/' . $inem->BukuID) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ url('hapus/' . $inem->BukuID) }}"
-                            class="btn btn-danger">Delete</a>
+                        <a href="{{ url('hapus/' . $inem->BukuID) }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             @endforeach

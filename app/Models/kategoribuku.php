@@ -12,7 +12,7 @@ class kategoribuku extends Model
      //set tabel
      protected $table = "kategoribuku";
      //set primary key
-     protected $primaryKey = "kategoriID";
+     protected $primaryKey = "KategoriID";
      //set auto increment
      public $incrementing = false;
  

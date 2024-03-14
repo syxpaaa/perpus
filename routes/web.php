@@ -33,6 +33,10 @@ Route::get('edit/{id}',[adminController::class,'edit']);
 Route::post('edit/{id}',[adminController::class,'update']);
 Route::get('hapus/{id}',[adminController::class,'hapus']);
 
+
 Route::get('kategori',[adminController::class,'kategori']);
-Route::get('tambahkategori',[adminController::class,'tambahkategori']);
-Route::post('tambahkategori',[adminController::class,'cektambahkategori']);
+Route::get('kategori/tambah',[adminController::class,'tambahkategori']);
+Route::post('kategori/tambah',[adminController::class,'cektambahkategori']);
+Route::get('kategori/hapus/{id}',[adminController::class,'hps']);
+Route::get('kategori/edit/{id}',[adminController::class,'editt']);
+Route::post('kategori/edit/{id}',[adminController::class,'updat']);
