@@ -22,7 +22,7 @@
                 <div class="text-center text-muted mb-4">
                   <small>sign up</small>
                 </div>
-                <form action="{{url('tambahpetu')}}" method="post">
+                <form action="{{url('registrasi/tambah/')}}" method="post">
                   @csrf
                   <div class="form-group">
                       <label for="Username" class="form-label">Username</label>
@@ -81,6 +81,9 @@
                   </div>             
                   <div class="text-center">
                     <button class="btn btn-primary mt-4">Create account</button>
+                  </div>
+                  <div class="text-center">
+                    <a href="{{url('registrasi')}}" class="btn btn-primary mt-4">Batal</a>
                   </div>
                 </form>
               </div>

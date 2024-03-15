@@ -22,7 +22,7 @@
                 Gagal edit Buku
             </div>
         @endif
-        <form action="{{ url('edit/'.$editbu->BukuID) }}" method="post">
+        <form action="{{ url('buku/edit/'.$editbu->BukuID) }}" method="post">
             @csrf
           <!-- Projects table -->
           <table class="table align-items-center table-flush">

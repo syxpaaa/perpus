@@ -9,7 +9,7 @@
             <h3 class="mb-0">Buku</h3>
           </div>
           <div class="col text-right">
-            <a href="tambahbuku" class="btn btn-sm btn-primary">Tambah buku</a>
+            <a href="{{ url('buku/tambah') }}" class="btn btn-sm btn-primary">Tambah buku</a>
           </div>
         </div>
       </div>
@@ -39,8 +39,8 @@
                     <td>{{ $inem->stok }}</td>
                     <td>{{ $inem->KategoriID }}</td>
                     <td class="right">
-                        <a href="{{ url('edit/' . $inem->BukuID) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ url('hapus/' . $inem->BukuID) }}" class="btn btn-danger">Delete</a>
+                        <a href="{{ url('buku/edit/' . $inem->BukuID) }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ url('buku/hapus/' . $inem->BukuID) }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             @endforeach

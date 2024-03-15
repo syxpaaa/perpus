@@ -17,22 +17,22 @@ use Illuminate\Support\Facades\Route;
 
 
 //admin
+Route::view('layout','adminlayot');
 Route::get('/',[adminController::class,'index']);
+
 Route::get('login',[adminController::class,'login']);
 Route::post('login',[adminController::class,'ceklogin']);
 
 Route::get('registrasi',[adminController::class,'registrasi']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
-Route::get('tambahpetu',[adminController::class,'tambahpetu']);
-Route::post('tambahpetu',[adminController::class,'simpen']);
-Route::view('layout','adminlayot');
+Route::get('registrasi/tambah',[adminController::class,'tambahpetu']);
+Route::post('registrasi/tambah',[adminController::class,'simpen']);
 
 Route::get('buku',[adminController::class,'buku']);
-Route::get('tambahbuku',[adminController::class,'tambahbuku']);
-Route::post('tambahbuku',[adminController::class,'cektambahbuku']);
-Route::get('edit/{id}',[adminController::class,'edit']);
-Route::post('edit/{id}',[adminController::class,'update']);
-Route::get('hapus/{id}',[adminController::class,'hapus']);
-
+Route::get('buku/tambah',[adminController::class,'tambahbuku']);
+Route::post('buku/tambah',[adminController::class,'cektambahbuku']);
+Route::get('buku/edit/{id}',[adminController::class,'edit']);
+Route::post('buku/edit/{id}',[adminController::class,'update']);
+Route::get('buku/hapus/{id}',[adminController::class,'hapus']);
 
 Route::get('kategori',[adminController::class,'kategori']);
 Route::get('kategori/tambah',[adminController::class,'tambahkategori']);

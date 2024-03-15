@@ -22,7 +22,7 @@
                 Gagal tambah Buku
             </div>
         @endif
-        <form action="{{ url('tambahbuku') }}" method="post">
+        <form action="{{ url('buku/tambah/') }}" method="post">
             @csrf
           <!-- Projects table -->
           <table class="table align-items-center table-flush">
@@ -59,15 +59,17 @@
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label" for="basic-default-name">kategori</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="KategoriID" id="KategoriID" placeholder="kategori" />
-                  </div>
+                  <select class="col-sm-2 col-form-label" name="KategoriID" id="KategoriID">
+                    @foreach ($datak as $item)
+                        <option value="{{$item->KategoriID}}">{{$item->Namakategoori}}</option>
+                    @endforeach
+                  </select>
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-primary w-100">Tambah</button>
                   </div>
                   <div class="mb-3">
-                    <button class="btn btn-primary w-100" type="reset">Batal</button>
+                    <a href="{{url('buku')}}" class="btn btn-primary w-100" type="reset">kembali</a>
                   </div>
               </form>
             </div>

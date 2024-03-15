@@ -57,7 +57,9 @@ class adminController extends Controller
     
     public function tambahBuku()
     {
-        return view('admin.tambahbuku');
+        $ambil = new kategoribuku();
+        $cokot = new buku();
+        return view('admin.tambahbuku',['datak'=>$ambil->all()]);
     }
     public function cektambahbuku(Request $request){
         $m = new buku();

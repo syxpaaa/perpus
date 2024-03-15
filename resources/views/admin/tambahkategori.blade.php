@@ -6,7 +6,7 @@
         <div class="card-header border-0">
           <div class="row align-items-center">
             <div class="col">
-              <h3 class="mb-0">Tambah Buku</h3>
+              <h3 class="mb-0">Tambah Kategori</h3>
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@
                 Gagal tambah Kategori
             </div>
         @endif
-        <form action="{{ url('tambahkategori') }}" method="post">
+        <form action="{{ url('kategori/tambah/') }}" method="post">
             @csrf
           <!-- Projects table -->
           <table class="table align-items-center table-flush">
@@ -37,7 +37,7 @@
                     <button class="btn btn-primary w-100">Tambah</button>
                   </div>
                   <div class="mb-3">
-                    <button class="btn btn-primary w-100" type="reset">Batal</button>
+                    <a href="{{url('kategori')}}" class="btn btn-primary w-100" type="reset">kembali</a>
                   </div>
               </form>
             </div>

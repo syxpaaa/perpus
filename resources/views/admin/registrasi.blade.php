@@ -9,7 +9,7 @@
             <h3 class="mb-0">Register</h3>
           </div>
           <div class="col text-right">
-            <a href="tambahpetu" class="btn btn-sm btn-primary">Register</a>
+            <a href="{{url('registrasi/tambah')}}" class="btn btn-sm btn-primary">Register</a>
           </div>
         </div>
       </div>

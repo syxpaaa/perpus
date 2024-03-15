@@ -22,7 +22,7 @@
                 Gagal edit Buku
             </div>
         @endif
-        <form action="{{ url('editt/'.$editka->KategoriID) }}" method="post">
+        <form action="{{ url('kategori/edit/'.$editka->KategoriID) }}" method="post">
             @csrf
           <!-- Projects table -->
           <table class="table align-items-center table-flush">
