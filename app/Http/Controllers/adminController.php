@@ -50,6 +50,23 @@ class adminController extends Controller
         return back()->with('pesan','registrasi gagal');
     }
 
+    public function edi($id){
+        $p = new admin();
+        return view('admin.editregis',['editre'=>$p->find($id)]);
+    }
+    public function upda(Request $request,$id){
+        $p = new admin();
+        $validasi = $request->validate([
+            'Username'=>'required',
+            'password'=>'required',
+            'email'=>'required',
+            'namalengkap'=>'required',
+            'noHp'=>'required|max:13'
+        ]);
+        $p = $p->find($id)->update($request->all());
+        return redirect('registrasi')->with('Pesan','Update Berhasil');
+    }
+
     public function buku(){
         $inem = new buku();
         return view('admin.buku',['data'=>$inem->all()]);

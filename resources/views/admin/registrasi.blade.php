@@ -37,8 +37,8 @@
                     <td>{{ $inem->namalengkap }}</td>
                     <td>{{ $inem->noHp }}</td>
                     <td class="right">
-                        <a href="{{ url('edit/' . $inem->AdminID) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ url('hapus/' . $inem->AdminID) }}"
+                        <a href="{{ url('registrasi/edit/' . $inem->AdminID) }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ url('registrasi/hapus/' . $inem->AdminID) }}"
                             class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
