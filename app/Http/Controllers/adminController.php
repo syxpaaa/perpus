@@ -66,6 +66,12 @@ class adminController extends Controller
         $p = $p->find($id)->update($request->all());
         return redirect('registrasi')->with('Pesan','Update Berhasil');
     }
+    public function hapu($id){
+        $p = new admin();
+        $p = $p->find($id);
+        $p->delete();
+        return back();
+    }
 
     public function buku(){
         $inem = new buku();

@@ -57,6 +57,20 @@
                     <input type="number" class="form-control" name="noHp" id="noHp" placeholder="No Hp" />
                   </div>
                 </div>
+                <div class="row mb-3">
+                  <label for="basic-default-level" class="col-sm-2 col-form-label">Level</label>
+                  <div class="col-sm-10">
+                  <select class="form-select" name="level" id="level" placeholder="level">
+                  <option value="admin">admin</option>
+                  <option value="petugas">petugas</option>
+                  </select>
+                  @error('level')
+                      <div class="form-text">
+                          {{$message}}
+                      </div>
+                  @enderror
+                </div>
+              </div>
                 <div class="mb-3">
                     <button class="btn btn-primary w-100">Tambah</button>
                   </div>

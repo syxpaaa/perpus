@@ -28,6 +28,7 @@ Route::get('registrasi/tambah',[adminController::class,'tambahpetu']);
 Route::post('registrasi/tambah',[adminController::class,'simpen']);
 Route::get('registrasi/edit/{id}',[adminController::class,'edi']);
 Route::post('registrasi/edit/{id}',[adminController::class,'upda']);
+Route::get('registrasi/hapus/{id}',[adminController::class,'hapu']);
 
 Route::get('buku',[adminController::class,'buku']);
 Route::get('buku/tambah',[adminController::class,'tambahbuku']);

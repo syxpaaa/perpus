@@ -28,39 +28,33 @@
           <table class="table align-items-center table-flush">
             <div class="card-body">
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">Username</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Judul" id="Judul" value="{{ $editre->Judul }}" />
+                    <input type="text" class="form-control" name="Username" id="Username" value="{{ $editre->Username }}" />
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label" for="basic-default-name">Penulis</label>
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">password</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Penulis" id="Penulis" value="{{ $editre->Penulis }}"/>
+                    <input type="text" class="form-control" name="password" id="password" value="{{ $editre->password }}"/>
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label" for="basic-default-name">Penerbit</label>
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">Email</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Penerbit" id="Penerbit" value="{{ $editre->Penerbit }}" />
+                    <input type="text" class="form-control" name="email" id="email" value="{{ $editre->email }}" />
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label" for="basic-default-name">Tahun Terbit</label>
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">Nama lengkap</label>
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" name="TahunTerbit" id="TahunTerbit" value="{{ $editre->TahunTerbit }}"/>
+                    <input type="text" class="form-control" name="namalengkap" id="namalengkap" value="{{ $editre->namalengkap }}"/>
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label" for="basic-default-name">Stok</label>
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">No Hp</label>
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" name="stok" id="stok" value="{{ $editre->stok }}"/>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label" for="basic-default-name">kategori</label>
-                  <div class="col-sm-10">
-                    <input type="number" class="form-control" name="KategoriID" id="KategoriID" value="{{ $editre->KategoriID }}"/>
+                    <input type="number" class="form-control" name="noHp" id="noHp" value="{{ $editre->noHp }}"/>
                   </div>
                 </div>
                 <div class="mb-3">

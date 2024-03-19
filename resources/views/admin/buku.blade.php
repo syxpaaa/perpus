@@ -16,13 +16,13 @@
         <table class="table align-items-center table-flush">
           <thead class="thead-light">
             <tr>
-              <th scope="col" class="sort" data-sort="name">ID</th>
-              <th scope="col" class="sort" data-sort="budget">Judul</th>
-              <th scope="col" class="sort" data-sort="status">Penulis</th>
-              <th scope="col" class="sort" data-sort="budget">Penerbit</th>
-              <th scope="col" class="sort" data-sort="status">Tahun Terbit</th>
-              <th scope="col" class="sort" data-sort="budget">Stok</th>
-              <th scope="col" class="sort" data-sort="status">Kategori</th>
+              <th scope="col" class="sort" data-sort="BukuID">ID</th>
+              <th scope="col" class="sort" data-sort="Judul">Judul</th>
+              <th scope="col" class="sort" data-sort="Penulis">Penulis</th>
+              <th scope="col" class="sort" data-sort="Penerbit">Penerbit</th>
+              <th scope="col" class="sort" data-sort="TahunTerbit">Tahun Terbit</th>
+              <th scope="col" class="sort" data-sort="stok">Stok</th>
+              <th scope="col" class="sort" data-sort="KategoriID">Kategori</th>
               <th scope="col">Aksi</th>
             </tr>
           </thead>
