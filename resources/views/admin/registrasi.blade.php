@@ -20,6 +20,7 @@
               <th scope="col" class="sort" data-sort="email">Email</th>
               <th scope="col" class="sort" data-sort="namalengkap">nama Lengkap</th>
               <th scope="col" class="sort" data-sort="noHp">No Hp</th>
+              <th scope="col" class="sort" data-sort="level">level</th>
               <th scope="col" >Aksi</th>
             </tr>
           </thead>
@@ -32,6 +33,7 @@
                     <td>{{ $inem->email }}</td>
                     <td>{{ $inem->namalengkap }}</td>
                     <td>{{ $inem->noHp }}</td>
+                    <td>{{ $inem->level }}</td>
                     <td>
                       <div class="dropdown">
                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

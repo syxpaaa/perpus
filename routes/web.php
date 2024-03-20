@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\peminjamController;
+use App\Http\Middleware\cekAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,14 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/',[peminjamController::class,'index']);
 
 //admin
 Route::view('layout','adminlayot');
-Route::get('/',[adminController::class,'index']);
+Route::get('petugas',[adminController::class,'index']);
 
-Route::get('login',[adminController::class,'login']);
-Route::post('login',[adminController::class,'ceklogin']);
+Route::get('login',[loginController::class,'login']);
+Route::post('login',[loginController::class,'ceklogin']);
+Route::get('keluar',[loginController::class,'keluar']);
 
 Route::get('registrasi',[adminController::class,'registrasi']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
 Route::get('registrasi/tambah',[adminController::class,'tambahpetu']);

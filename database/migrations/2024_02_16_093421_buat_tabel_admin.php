@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email', 255);
             $table->string('namalengkap',255);
             $table->string('noHp',13);
+            $table->enum('level',['admin','petugas']);
             $table->timestamps();
         }); 
     }

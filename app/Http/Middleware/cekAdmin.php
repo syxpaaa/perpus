@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class validasiAdmin
+class cekAdmin
 {
     /**
      * Handle an incoming request.
@@ -15,8 +15,12 @@ class validasiAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
+        ddd(session('petugas'));
+        if(session('petugas')->level !='admin') {
+            // return back();
+            return redirect('/petug');
 
-        
+        }
         return $next($request);
     }
 }

@@ -12,19 +12,7 @@ class adminController extends Controller
     public function index(){
         return view('admin.dasbor');
     }
-    public function login(){
-        return view('admin.login');
-    }
-
-    public function ceklogin(Request $request){
-        $p = new admin();
-        if($p->where('Username',$request->input('Username'))->where('password',$request->input('password'))->exists()){
-         $petugas = $p->first();
-        session(['petugas'=>$petugas]);
-         return redirect('/');
-        }
-        return back()->with('pesan','username dan password belum terdaftar');
-    }
+    
 
     public function registrasi(){
         $inem = new admin();
@@ -43,7 +31,8 @@ class adminController extends Controller
             'namalengkap'=>'required',
             'noHp'=>'required|max:13'
         ]);
-        $p->create($request->all());
+        $p->create($cek);
+        // ddd($request->all());
         if ($p->where('Username',$request->input('Username'))->where('password',$request->input('password'))->where('email',$request->input('email'))->where('namalengkap',$request->input('namalengkap'))->where('noHp',$request->input('noHp'))->exists()){
             return redirect('registrasi')->with('pesan','registrasi berhasil');
         }
@@ -55,7 +44,6 @@ class adminController extends Controller
         return view('admin.editregis',['editre'=>$p->find($id)]);
     }
     public function upda(Request $request,$id){
-        $p = new admin();
         $validasi = $request->validate([
             'Username'=>'required',
             'password'=>'required',
@@ -63,6 +51,7 @@ class adminController extends Controller
             'namalengkap'=>'required',
             'noHp'=>'required|max:13'
         ]);
+        $p = new admin();
         $p = $p->find($id)->update($request->all());
         return redirect('registrasi')->with('Pesan','Update Berhasil');
     }

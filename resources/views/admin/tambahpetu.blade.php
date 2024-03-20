@@ -46,9 +46,9 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label" for="basic-default-name">Tahun Terbit</label>
+                  <label class="col-sm-2 col-form-label" for="basic-default-name">Nama lengkap</label>
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" name="namalengkap" id="namalengkap" placeholder="nama lengkap" />
+                    <input type="text" class="form-control" name="namalengkap" id="namalengkap" placeholder="nama lengkap" />
                   </div>
                 </div>
                 <div class="row mb-3">
@@ -64,11 +64,6 @@
                   <option value="admin">admin</option>
                   <option value="petugas">petugas</option>
                   </select>
-                  @error('level')
-                      <div class="form-text">
-                          {{$message}}
-                      </div>
-                  @enderror
                 </div>
               </div>
                 <div class="mb-3">

@@ -35,7 +35,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="{{url('/')}}">
+              <a class="nav-link active" href="{{url('petugas')}}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
@@ -121,7 +121,7 @@
                     <img alt="Image placeholder" src="/assets/img/theme/team-4.jpg">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                    <span class="mb-0 text-sm  font-weight-bold">{{}}</span>
                   </div>
                 </div>
               </a>
@@ -130,7 +130,7 @@
                   <h6 class="text-overflow m-0">Welcome!</h6>
                 </div>
                 <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
+                <a href="{{url('keluar')}}" class="dropdown-item">
                   <i class="ni ni-user-run"></i>
                   <span>Logout</span>
                 </a>
