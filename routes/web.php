@@ -4,6 +4,7 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\peminjamController;
 use App\Http\Middleware\cekAdmin;
+use App\Http\Middleware\validasiAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,7 @@ Route::get('login',[loginController::class,'login']);
 Route::post('login',[loginController::class,'ceklogin']);
 Route::get('keluar',[loginController::class,'keluar']);
 
-Route::get('registrasi',[adminController::class,'registrasi']);//->middleware(ValidasiAdmin::class,cekAdmin::class);
+Route::get('registrasi',[adminController::class,'registrasi']);
 Route::get('registrasi/tambah',[adminController::class,'tambahpetu']);
 Route::post('registrasi/tambah',[adminController::class,'simpen']);
 Route::get('registrasi/edit/{id}',[adminController::class,'edi']);

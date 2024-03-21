@@ -15,10 +15,10 @@ class cekAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        ddd(session('petugas'));
+        
         if(session('petugas')->level !='admin') {
             // return back();
-            return redirect('/petug');
+            return redirect('/petugas');
 
         }
         return $next($request);

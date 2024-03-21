@@ -27,15 +27,15 @@ class loginController extends Controller
             } elseif ($p->where('Username', $request->Username)->where('password', $request->password)->exists()) {
                 $petugas = $p->first();
                 session(['petugas' => $petugas]);
-                return redirect('/petu');
+                return redirect('/petugas');
             }
         }
     }
     public function keluar()
     {
         session()->flush();
-        return back();
-        // return redirect('/pet');
+        //return back();
+        return redirect('/login');
 
     }
 }

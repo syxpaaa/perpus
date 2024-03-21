@@ -16,7 +16,9 @@ class validasiAdmin
     public function handle(Request $request, Closure $next): Response
     {
 
-        
+        if (!session('petugas')) {
+            return redirect('petugas/login');
+        }
         return $next($request);
     }
 }
