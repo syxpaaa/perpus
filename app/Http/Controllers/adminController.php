@@ -12,8 +12,10 @@ class adminController extends Controller
     public function index(){
         return view('admin.dasbor');
     }
-    
 
+    
+    
+    //registrasi
     public function registrasi(){
         $inem = new admin();
         return view('admin.registrasi',['data'=>$inem->all()]);
@@ -62,6 +64,9 @@ class adminController extends Controller
         return back();
     }
 
+
+
+    //Buku
     public function buku(){
         $inem = new buku();
         return view('admin.buku',['data'=>$inem->all()]);
@@ -111,6 +116,9 @@ class adminController extends Controller
         return redirect('buku')->with('Pesan','Update Buku Berhasil');
     }
 
+
+
+    //kategori
     public function kategori(){
         $inem = new kategoribuku();
         return view('admin.kategori',['data'=>$inem->all()]);

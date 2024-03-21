@@ -64,13 +64,6 @@
                 <span class="nav-link-text">Laporan</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="examples/login.html">
-                <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Login</span>
-              </a>
-            </li>
-
           </ul>
         </div>
       </div>
@@ -121,7 +114,7 @@
                     <img alt="Image placeholder" src="/assets/img/theme/team-4.jpg">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">{{}}</span>
+                    <span class="mb-0 text-sm  font-weight-bold"></span>
                   </div>
                 </div>
               </a>

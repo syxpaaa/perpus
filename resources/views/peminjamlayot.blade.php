@@ -41,9 +41,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('buku')}}">
-                <i class="ni ni-books text-orange"></i>
-                <span class="nav-link-text">Buku</span>
+              <a class="nav-link" href="{{url('')}}">
+                <i class="ni ni-books text-pink"></i>
+                <span class="nav-link-text">Perpustakaan</span>
               </a>
             </li>
             <li class="nav-item">
@@ -58,19 +58,6 @@
                 <span class="nav-link-text">Register</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="examples/tables.html">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Laporan</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="examples/login.html">
-                <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Login</span>
-              </a>
-            </li>
-
           </ul>
         </div>
       </div>
@@ -145,7 +132,7 @@
 
     <!-- Page content -->
     <div class="container mt-6">
-      @yield('content')
+      @yield('kontent')
     </div>
   </div>
     
